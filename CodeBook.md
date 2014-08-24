@@ -9,10 +9,9 @@ The raw data set contains data tables with 3-axial motion values (X, Y, Z) of 30
 The raw data set includes:
 
 
+- 'features.txt': List of all 3-axial motion variable names.
 
-- 'features.txt': List of all features.
-
-- 'activity_labels.txt': Links the class labels with their activity name.
+- 'activity_labels.txt': Links the class labels in the train and test data sets with corresponding activity name.
 
 - 'train/X_train.txt': Training set.
 
@@ -25,18 +24,24 @@ The raw data set includes:
 
 
 
+The tables above were merged in R with the run_Analysis.R script.
+
+The script creates a tidy data set.
+
+
+
 Tidy Data
 ---------
 
-Has ONE data table with columns of Subject, Activity, and 86 other column variables of mean and standard deviation values for each measured variable.
+The final tidy data table contains columns of Subject, Activity, and 86 other columns of variables of mean and standard deviation values for each measured variable.
 
-Column 1: Subject ID
+- Column 1: Subject ID
 
 The code for a volunteer
 
-Column 2: Activity
+- Column 2: Activity
 
 The activity performed by the volunteer:
 WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 
-Column 3: to 88 = mean values of mean/stand deviation values of observed motion variables
+- Column 3 to 88: mean values of mean/stand deviation values of observed motion variables
