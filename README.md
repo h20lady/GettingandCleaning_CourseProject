@@ -77,7 +77,14 @@ a6 <-gsub("6",actnames[6,2],(a5))
 combfin[,2] <- a6
 
 
+TIDY DATA SET
+-------------
 
+To calculate the means of each variable per activity and subject, the reshape2 package was utilized.
 
--
+meltdata <- melt(combfin,id=c("Subject","Activity"), measure.vars = names(xcomb))
+tidydata <- dcast(meltdata, Subject+Activity ~ variable,mean)
+
+The final tidy data set "tidydata.txt" was created with 180 rows and 88 columns.
+
 
